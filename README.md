@@ -13,4 +13,4 @@ Put the path to your ethically sourced video in the `path` variable.
 
 Change the font size of your terminal for lower/higher resolution. If you make the font too small audio will desync because it takes too long to think per frame
 
-Run the `bapple.py` script. it's called that because the project was initially another bad apple recreation.
+Run the `bapple.py` script to start it. it's called that because the project was initially another bad apple recreation.
