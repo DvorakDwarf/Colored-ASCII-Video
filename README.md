@@ -3,6 +3,8 @@
 # Colored-ASCII-Video
 A program that takes a video file and outputs colored ASCII real-time video inside a terminal (with audio). Only works if your terminal uses ANSI codes. The windows terminal does not recognize color by default. It's an option on win10+. Also the font needs to be monospace or the output will look funny. The font used in all demos is Iosevka Nerd Font
 
+For the Bad Apple demo, I messed with the settings of the program and it created a cool border effect I like.
+
 How to use
 -------------
 Put the path to your ethically sourced video in the `path` variable. 
