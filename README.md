@@ -5,6 +5,8 @@ A program that takes a video file and outputs colored ASCII real-time video insi
 
 For the Bad Apple demo, I messed with the settings of the program and it created a cool border effect I like.
 
+Do what you want with the code, but credit would be much appreciated.
+
 How to use
 -------------
 Put the path to your ethically sourced video in the `path` variable. 
