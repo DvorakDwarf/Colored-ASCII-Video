@@ -1,7 +1,7 @@
 ![GitHub](https://img.shields.io/github/license/hunar4321/life_code)
 
 # Colored-ASCII-Video
-A program that takes a video file and outputs colored ASCII real-time video inside a terminal. Only works if your terminal works with ANSI codes. The windows terminal does not recognize color by default. Also the font needs to be monospace or the output will look funny
+A program that takes a video file and outputs colored ASCII real-time video inside a terminal (with audio). Only works if your terminal uses ANSI codes. The windows terminal does not recognize color by default. It's an option on win10+. Also the font needs to be monospace or the output will look funny. The font used in all demos is Iosevka Nerd Font
 
 How to use
 -------------
@@ -17,4 +17,13 @@ Run the `bapple.py` script to start it. it's called that because the project was
 
 Examples
 ---------
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY](https://streamable.com/e/qyrrm3)
+The size limit on github is miserably low. Follow the the streamable links for full video
+
+![fighter](https://user-images.githubusercontent.com/96934612/202935752-28bbe7c7-34e9-475e-8e94-73be04358da9.gif)
+https://streamable.com/vbuxni
+
+![bapple](https://user-images.githubusercontent.com/96934612/202935774-eb57d621-dc68-4917-94f9-1b1fe77a54be.gif)
+https://streamable.com/qyrrm3
+
+![gamer](https://user-images.githubusercontent.com/96934612/202935903-ff8285fa-95af-41b6-9614-d499234711e8.gif)
+https://streamable.com/kn4793
