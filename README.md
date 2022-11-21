@@ -5,6 +5,8 @@ A program that takes a video file and outputs colored ASCII real-time video insi
 
 For the Bad Apple demo, I messed with the settings of the program and it created a cool border effect I like.
 
+Made a Youtube video: https://www.youtube.com/watch?v=s4weLmlOc0s&t=4s&ab_channel=HistidineDwarf
+
 Do what you want with the code, but credit would be much appreciated.
 
 How to use
