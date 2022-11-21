@@ -1,7 +1,7 @@
 ![GitHub](https://img.shields.io/github/license/hunar4321/life_code)
 
 # Colored-ASCII-Video
-A program that takes a video file and outputs colored ASCII real-time video inside a terminal. Only works if your terminal works with ANSI codes. The windows terminal does not recognize color by default.
+A program that takes a video file and outputs colored ASCII real-time video inside a terminal. Only works if your terminal works with ANSI codes. The windows terminal does not recognize color by default. Also the font needs to be monospace or the output will look funny
 
 How to use
 -------------
@@ -14,3 +14,7 @@ Put the path to your ethically sourced video in the `path` variable.
 Change the font size of your terminal for lower/higher resolution. If you make the font too small audio will desync because it takes too long to think per frame
 
 Run the `bapple.py` script to start it. it's called that because the project was initially another bad apple recreation.
+
+Examples
+---------
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY](https://streamable.com/e/qyrrm3)
