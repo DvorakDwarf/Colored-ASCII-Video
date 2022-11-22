@@ -21,7 +21,7 @@ ASCII_MONOCHROME = ["#", "·", "·"]
 ascii_scheme = ASCII_CHARS_BACKWARDS
 
 #Set path to video
-path = 'Video/Zone.mp4'
+path = 'Video/Fighter.mp4'
 
 #Pick how to size the frames. 1 = keep aspect ratio, 2 = use max space
 mode = 2
