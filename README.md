@@ -33,7 +33,7 @@ https://www.youtube.com/watch?v=6QAiq536yWE&ab_channel=ichimaru
 ![bapple](https://user-images.githubusercontent.com/96934612/202935774-eb57d621-dc68-4917-94f9-1b1fe77a54be.gif)
 https://streamable.com/qyrrm3
 
-https://www.youtube.com/watch?v=6QAiq536yWE&ab_channel=ichimaru
+https://www.youtube.com/watch?v=FtutLA63Cp8
 
 ![gamer](https://user-images.githubusercontent.com/96934612/202935903-ff8285fa-95af-41b6-9614-d499234711e8.gif)
 https://streamable.com/kn4793
