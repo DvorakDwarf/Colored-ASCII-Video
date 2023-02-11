@@ -6,7 +6,7 @@ import math
 
 # Input video url
 video_url = input("Enter video url: ")
-
+if(YouTube(video_url).title())
 def download_video(video_url):
     yt = YouTube(video_url)
     stream = yt.streams.filter(file_extension='mp4').first()
