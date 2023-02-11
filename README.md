@@ -14,9 +14,9 @@ Do what you want with the code, but credit would be much appreciated.
 
 How to use
 -------------
-1. Install python3\
-2.Run `pip install -r requirements.txt`\
-3.Run `python3 bapple.py`\
+1. Install python3
+2. Run `pip install -r requirements.txt`
+3. Run `python3 bapple.py`\
 Provide a url to Youtube Video in terminal.
 Put the path to your ethically sourced video in the `path` variable. 
 
