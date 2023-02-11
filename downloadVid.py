@@ -4,19 +4,22 @@ import requests
 from tqdm import tqdm
 import math
 
-# Input video url
-video_url = input("[*]Enter video URL: ")
 def download_video(video_url):
     yt = YouTube(video_url)
     stream = yt.streams.filter(file_extension='mp4').first()
     response = requests.get(stream.url, stream=True)
+    filename = yt.title + ".mp4"
+    file_path = os.path.join("Video/", filename)
+
+    #If file already exists, don't download it again
+    if os.path.isfile(file_path):
+        print("Video already downloaded. Starting playback...")
+        video_url = file_path
+        return video_url
 
     total_size = int(response.headers.get("Content-Length", 0))
     block_size = 1024
     wrote = 0 
-
-    filename = yt.title + ".mp4"
-    file_path = os.path.join("Video/", filename)
 
     with open(file_path, "wb") as f:
         for data in tqdm(response.iter_content(block_size), total=math.ceil(total_size//block_size), unit="KB", unit_scale=True):
@@ -25,5 +28,7 @@ def download_video(video_url):
     if total_size != 0 and wrote != total_size:
         print("ERROR, something went wrong")
 
+# Input video url
+video_url = input("[*]Enter video URL: ")
 download_video(video_url)
 
