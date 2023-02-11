@@ -1,9 +1,9 @@
 ![GitHub](https://img.shields.io/github/license/hunar4321/life_code)
 
 # Play Colored ASCII Videos in your Terminal
-A program that takes a video file and outputs colored ASCII real-time video inside a terminal (with audio). 
+A program that takes a video file and outputs colored ASCII real-time video inside a terminal (with audio).\
 Only works if your terminal uses ANSI codes. 
-The windows terminal does not recognize color by default. It's an option on win10+. 
+The windows terminal does not recognize color by default. It's an option on win10+.\
 Also the font needs to be monospace or the output will look funny. The font used in all demos is Iosevka Nerd Fontю
 
 For the Bad Apple demo, I messed with the settings of the program and it created a cool border effect I like.
@@ -14,7 +14,9 @@ Do what you want with the code, but credit would be much appreciated.
 
 How to use
 -------------
-- Install Python3
+1. Install python3\
+2.Run `pip install -r requirements.txt`\
+3.Run `python3 bapple.py`\
 Provide a url to Youtube Video in terminal.
 Put the path to your ethically sourced video in the `path` variable. 
 
