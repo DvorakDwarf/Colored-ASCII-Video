@@ -3,6 +3,9 @@ import sys
 import os
 import time
 from ffpyplayer.player import MediaPlayer
+from pytube import YouTube
+#import downloadVid
+
 
 #To Add
 #Multithread
@@ -20,11 +23,13 @@ ASCII_MONOCHROME = ["#", "·", "·"]
 #Change it to one of the ones above if you wanna
 ascii_scheme = ASCII_CHARS_BACKWARDS
 
-#Set path to video
-path = 'Video/Fighter.mp4'
+#Path to downloaded video
+path = "Video/Fighter.mp4"
 
 #Pick how to size the frames. 1 = keep aspect ratio, 2 = use max space
 mode = 2
+
+#Set video source
 
 video = cv2.VideoCapture(path)
 player = MediaPlayer(path)
