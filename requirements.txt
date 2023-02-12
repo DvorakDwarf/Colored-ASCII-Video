@@ -1,0 +1,5 @@
+ffpyplayer==4.4.0
+opencv_python==4.7.0.68
+pytube==12.1.2
+requests==2.25.1
+tqdm==4.64.1
