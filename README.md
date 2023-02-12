@@ -2,9 +2,10 @@
 
 # Play Colored ASCII Videos in your Terminal
 A program that takes a video file and outputs colored ASCII real-time video inside a terminal (with audio).\
+Now works with youtube videos in real time as well thanks to [Roman](https://github.com/zeromero-dev)!
 Only works if your terminal uses ANSI codes. 
 The windows terminal does not recognize color by default. It's an option on win10+.\
-Also the font needs to be monospace or the output will look funny. The font used in all demos is Iosevka Nerd Fontю
+Also the font needs to be monospace or the output will look funny. The font used in all demos is Iosevka Nerd Font.
 
 For the Bad Apple demo, I messed with the settings of the program and it created a cool border effect I like.
 
@@ -16,13 +17,10 @@ How to use
 -------------
 1. Install python3
 2. Run `pip install -r requirements.txt`
-3. Run `python3 bapple.py`\
-Provide a url to Youtube Video in terminal.
-Put the path to your ethically sourced video in the `path` variable. 
+3. Run `python3 bapple.py`
+4. Follow displayed instructions\
 
-**Note**: `ascii_scheme` controls whether bigger characters are used on brighter or darker pixels. Some video looks **terrible** with the wrong scheme.
-
-`mode` can be 1 or 2. 1 tries to keep the aspect ratio and 2 tries to fill up your terminal. Basically just try the other one if video breaks.
+**Note**: `ascii_scheme` controls whether bigger characters are used on brighter or darker pixels. Some video looks **terrible** with the wrong scheme. Same goes for the display mode. Mess around with options till it works, but Inverse scheme + max size usually works.
 
 Change the font size of your terminal for lower/higher resolution.<br>
 **If you make the font too small audio will desync because it takes too long to think per frame!**

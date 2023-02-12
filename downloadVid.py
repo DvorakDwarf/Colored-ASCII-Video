@@ -4,7 +4,7 @@ import requests
 from tqdm import tqdm
 import math
 
-def download_video(video_url):
+def download_video(video_url) -> str:
     yt = YouTube(video_url)
     
     filename = yt.title + ".mp4"
@@ -30,7 +30,5 @@ def download_video(video_url):
     if total_size != 0 and wrote != total_size:
         print("ERROR, something went wrong")
 
-# Input video url
-video_url = input("[*]Enter video URL: ")
-download_video(video_url)
+    return file_path
 

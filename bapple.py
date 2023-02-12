@@ -1,6 +1,7 @@
 import cv2
 import sys
 import os
+import questionary
 import time
 from ffpyplayer.player import MediaPlayer
 from pytube import YouTube
@@ -13,31 +14,58 @@ import downloadVid #local import that download the video
 
 #To Add
 #Multithread
+#Cleanup
+#Use background color as an option
 #Option for flipped colors, looked cool
-
-ASPECT_RATIO = 1.5 #Ratio of height to width for font
-#Palletes
-ASCII_CHARS = ["#", "%", "?", "+", ":", "·", "·"]
-ASCII_CHARS_BACKWARDS = ["·", "·", ":", "+", "%", "#", "#"]
-ASCII_MONOCHROME = ["#", "·", "·"]
+#Remake in rust
 
 # ·  ·  ·  ·  #
 
-#Set default pallete
-#Change it to one of the ones above if you wanna
-ascii_scheme = ASCII_CHARS_BACKWARDS
+ASPECT_RATIO = 1.5 #Ratio of height to width for font
 
-#Extract title for filename input
-video_url = downloadVid.video_url
-video_title = YouTube(video_url).title
+palletes = {
+    "Regular": ["#", "%", "?", "+", ":", "·", "·"],
+    "Inverse": ["·", "·", ":", "+", "%", "#", "#"],
+    "\"Monochrome\"": ["#", "·", "·"]
+}
 
-#Path to downloaded video
-#------------------------
-#Change this if you want to use a different video and not download
-path = "Video/" + video_title + ".mp4"
+modes = {
+    "Use max terminal space": 2,
+    "Maintain aspect ratio": 1,
+}
 
-#Pick how to size the frames. 1 = keep aspect ratio, 2 = use max space
-mode = 2
+display_modes = [
+    "YouTube",
+    "Local file"
+]
+
+#Might still be messy
+ascii_choice = questionary.select(
+    "What ASCII scheme to use ? (Try the other options if video looks bad)",
+    choices=list(palletes.keys()),
+    ).ask()
+ascii_scheme = palletes[ascii_choice]
+
+mode_choice = questionary.select(
+    "Which do you prefer ? (If one breaks, pick the other)",
+    choices=list(modes.keys())
+).ask()
+mode = modes[mode_choice]
+
+display_choice = questionary.select(
+    "Would you like to play a video from YouTube or a local file ?",
+    choices=display_modes
+).ask()
+
+path = None
+if display_choice == display_modes[0]:
+    # Input video url
+    video_url = input("[*]Enter video URL: ")
+
+    #Downloads video, returns path to file
+    path = downloadVid.download_video(video_url)
+else:
+    path = questionary.text("Then what is the path to your video ?",).ask()
 
 #Set video source
 video = cv2.VideoCapture(path)
