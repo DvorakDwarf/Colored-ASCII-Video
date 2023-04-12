@@ -6,9 +6,9 @@ import math
 import re
 
 
-def multi_replace_regex(string, replacements, ignore_case=False):
+def multi_replace_regex(string, replacements):
     for pattern, replacement in replacements.items():
-        string = re.sub(pattern, replacement, string, flags=re.I if ignore_case else 0)
+        string = re.sub(pattern, replacement, string)
     return string
 
 replacements = {
@@ -25,7 +25,7 @@ replacements = {
 def download_video(video_url) -> str:
     yt = YouTube(video_url)
 
-    filename = multi_replace_regex(yt.title, replacements, False) + ".mp4"
+    filename = multi_replace_regex(yt.title, replacements) + ".mp4"
     file_path = os.path.join("Video/", filename)
 
     #If file already exists, don't download it again
