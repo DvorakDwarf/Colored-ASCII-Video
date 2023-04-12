@@ -3,11 +3,29 @@ from pytube import YouTube
 import requests
 from tqdm import tqdm
 import math
+import re
+
+
+def multi_replace_regex(string, replacements, ignore_case=False):
+    for pattern, replacement in replacements.items():
+        string = re.sub(pattern, replacement, string, flags=re.I if ignore_case else 0)
+    return string
+
+replacements = {
+    "\\\\"  :   chr(0x29F9),
+    "[/]"   :   chr(0x29F8),
+    "[:]"   :   chr(0xFF1A),
+    "[*]"   :   chr(0xFF0A),
+    "[?]"   :   chr(0xFF1F),
+    '["]'   :   chr(0xFF02),
+    "[|]"   :   chr(0xFF5C)
+}
+
 
 def download_video(video_url) -> str:
     yt = YouTube(video_url)
-    
-    filename = yt.title + ".mp4"
+
+    filename = multi_replace_regex(yt.title, replacements, False) + ".mp4"
     file_path = os.path.join("Video/", filename)
 
     #If file already exists, don't download it again
